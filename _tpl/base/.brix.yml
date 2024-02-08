@@ -1,0 +1,6 @@
+
+
+context_file: ./demo/target/customer-information.txt
+
+templates_dir: ./demo/templates
+output_dir: ./demo/target

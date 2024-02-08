@@ -1,0 +1,14 @@
+.idea
+composer.lock
+report
+vendor/
+node_modules/
+/.phpunit.result.cache
+
+# Ignore everything in the /.dev_secrets directory
+/.dev_secrets/*
+
+# But exclude files starting with tpl_
+!/.dev_secrets/tpl_*
+
+.keystore.yml

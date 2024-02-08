@@ -1,0 +1,28 @@
+{
+  "name": "<project name>",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "make.mjs": "tsc -d && mv dist/index.js dist/index.mjs",
+    "make.cjs": "tsc -m commonjs",
+    "build": "npm run make.mjs && npm run make.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthias Leuffen",
+  "license": "MIT",
+  "dependencies": {
+    "@kasimirjs/embed": "*",
+    "@kasimirjs/app": "*",
+    "@kasimirjs/kit-bootstrap": "*"
+  },
+  "workspaces": [
+    "workspaces/*"
+  ],
+  "devDependencies": {
+    "esbuild": "^0.18"
+  }
+}

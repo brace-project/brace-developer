@@ -1,0 +1,36 @@
+{
+    "name": "<projectName>",
+    "type": "project",
+    "description": "<description>",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "<name>",
+            "email": "<email>"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    },
+
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        },
+        "files": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    }
+}

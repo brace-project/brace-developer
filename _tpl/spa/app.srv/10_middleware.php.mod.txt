@@ -1,0 +1,20 @@
+Add this Block to Pipe below `RouterEvalMiddleware` and before `RouterDispatchMiddleware`
+
+```php
+new SpaStaticFileServerMw(
+    __DIR__ . "/../www/spaserve",
+    liveReload: DEV_MODE,
+    observeDirs: [__DIR__ . "/../app.fe"],
+    loaders: [
+        new EsbuildLoader("/app.js", "app.fe/index.ts", "text/javascript", "/opt", minify: false, showWarnings: true),
+    ]
+
+)
+```
+
+and add use statement on top:
+
+```php
+use Brace\SpaServe\Loaders\EsbuildLoader;
+use Brace\SpaServe\SpaStaticFileServerMw;
+```

@@ -1,0 +1,12 @@
+Add the route below to redirect incoming traffic on the root path to the static middleware and regenerate the frontend routes.
+
+```php
+// Redirect to static Middleware (Frontend)
+$app->router->on("GET@/", function () use ($app) {
+    return $app->redirect("/static");
+});
+
+if (DEV_MODE === true) {
+    $app->router->writeJSStub(__DIR__ . "/../app.fe/_routes.js");
+}
+```

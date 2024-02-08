@@ -1,0 +1,43 @@
+{
+    "name": "brace/developer",
+    "type": "project",
+    "description": "Brace Developer tools",
+    "keywords": ["brace", "Dependency Injection", "Di"],
+    "homepage": "https://infracamp.org",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthias Leuffen",
+            "email": "matthes@leuffen.de"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "phore/filesystem": "*",
+        "brixlab/core": "*"
+    },
+
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Brace\\Developer\\": "src"
+        },
+        "files": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    }
+}
