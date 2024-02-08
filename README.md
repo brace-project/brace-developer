@@ -1,12 +1,7 @@
-# brace-mod-spaserve
-Module to serve JavaScript based Single Page Apps
+# brace Developer Tool
 
+## Setup a new project
 
-
-## TypeScript bundling
-
-- Supports Workspaces via esbuild
-
-
-##** LiveReload on dev Mode
-
+1. `composer init`
+2. `composer require brace/developer -dev`
+3. `vendor/bin/brace init`
