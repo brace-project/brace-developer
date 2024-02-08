@@ -1,0 +1,18 @@
+image: docker:stable
+stages:
+    - build
+
+services:
+    - docker:dind
+
+before_script:
+    - apk update && apk add bash curl
+    - curl -o kickstart 'https://raw.githubusercontent.com/nfra-project/nfra-kickstart/master/dist/kickstart.sh' && chmod +x kickstart
+
+latest:
+    stage: build
+    script:
+        - ./kickstart ci-build
+        - 'curl $CI_X2_DEPLOY_TRIGGER_URL'
+    only:
+        - main
