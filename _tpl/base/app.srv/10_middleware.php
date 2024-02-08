@@ -35,16 +35,7 @@ AppLoader::extend(function (BraceApp $app) {
         // Lets evaluate the Uri for Routes
         new RouterEvalMiddleware(),
         new SubscriptionMiddleware(),
-        // This is our dynamic Frontend. Everything below /static is handled here
-        new SpaStaticFileServerMw(
-            __DIR__ . "/../www/spaserve",
-            liveReload: DEV_MODE,
-            observeDirs: [__DIR__ . "/../app.fe"],
-            loaders: [
-                new EsbuildLoader("/app.js", "app.fe/index.ts", "text/javascript", "/opt", minify: false, showWarnings: true),
-            ]
 
-        ),
 
 
         // Dispatch the BraceRoute by the Controllers defined in 20_api_routes.php

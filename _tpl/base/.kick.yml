@@ -3,7 +3,13 @@
 version: 1
 from: "ghcr.io/nfra-project/kickstart-flavor-php:unstable"
 
-packages: []
+# Add List of packages to install (apt-get install) as Array or ~ for none
+packages: ~
+
+# Create a config file from a template using the environment variables
+config_file:
+    template: "config.php.dist"
+    target: "config.php"
 
 command:
   build:

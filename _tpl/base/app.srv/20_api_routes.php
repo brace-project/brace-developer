@@ -9,7 +9,7 @@ use Brace\Auth\Basic\SimpleBasicAuthMiddleware;
 use Brace\Core\AppLoader;
 use Brace\Core\BraceApp;
 use Brace\Router\Type\RouteParams;
-
+use App\Ctrl\DemoCtrl;
 
 AppLoader::extend(function (BraceApp $app) {
 
@@ -38,9 +38,5 @@ AppLoader::extend(function (BraceApp $app) {
         return $app->redirect("/static");
     });
 
-    // Write out the routes from the router to the frontend
-    if (DEV_MODE === true) {
-        $app->router->writeJSStub(__DIR__ . "/../app.fe/_routes.js");
-    }
 
 });
